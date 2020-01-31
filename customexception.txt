@@ -1,0 +1,22 @@
+
+class Invalid extends Exception{
+Invalid(String s){
+super(s);
+}
+}
+
+class customexception{
+public static void validate(int age) throws Invalid{
+if(age<18)
+throw new Invalid();
+else
+System.out.println("a/c is opened.");
+}
+public static void main(String args[]){
+try{
+validate(12);
+}
+catch(Exception m){System.out.println("Exception occured: "+m);}
+System.out.println("further process");
+}
+}
